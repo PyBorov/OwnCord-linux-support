@@ -1,3 +1,7 @@
+This for for working on linux 
+Server WORK on linux
+Client partially work on linux
+
 ![stability-experimental](https://img.shields.io/badge/stability-experimental-orange.svg?style=for-the-badge)
 
 
