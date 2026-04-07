@@ -3,6 +3,7 @@ This fork for run project on linux
 Server WORK on linux
 
 Client partially work on linux 
+
 Connect to voice chat not working, bug: tauri with WebRTC on WebKit (in settings camera and mic working)
 
 ![stability-experimental](https://img.shields.io/badge/stability-experimental-orange.svg?style=for-the-badge)
