@@ -55,4 +55,4 @@ windows = { version = "0.58", features = [
 keyring = { version = "2.3", features = ["platform-linux", "platform-macos"] }
 
 [target.'cfg(target_os = "linux")'.dependencies]
-webkit2gtk = { version = "2", features = ["v2_40"] }
+webkit2gtk = { version = "2", features = ["v2_10"] }

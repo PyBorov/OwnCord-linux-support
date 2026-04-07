@@ -63,9 +63,16 @@ pub fn run() {
             let window = app.get_webview_window("main")
             .expect("main window not found");
             window.with_webview(|webview| {
+                use webkit2gtk::PermissionRequestExt;
                 use webkit2gtk::WebViewExt;
                 use webkit2gtk::SettingsExt;
                 let wk = webview.inner();
+                // Автоматически разрешать запросы на микрофон/камеру (getUserMedia)
+                // Без этого WebKitGTK молча отклоняет все permission-request
+                wk.connect_permission_request(|_, request| {
+                    request.allow();
+                    true
+                });
                 if let Some(settings) = wk.settings() {
                     settings.set_enable_webrtc(true);
                     settings.set_enable_media_stream(true);
